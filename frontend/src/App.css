@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+}
+
+/* D3.js Chart Styling */
+.chart-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.chart-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Bar Chart Styles */
+.bar {
+  transition: fill 0.3s ease;
+}
+
+.bar:hover {
+  fill-opacity: 0.8;
+}
+
+/* Line Chart Styles */
+.line {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.dot {
+  stroke: #fff;
+  stroke-width: 2px;
+  transition: r 0.3s ease;
+}
+
+.dot:hover {
+  r: 6;
+}
+
+/* Scatter Plot Styles */
+.scatter-dot {
+  stroke: #fff;
+  stroke-width: 1px;
+  transition: all 0.3s ease;
+}
+
+.scatter-dot:hover {
+  stroke-width: 2px;
+  r: 8;
+}
+
+/* Pie Chart Styles */
+.pie-slice {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pie-slice:hover {
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+/* Area Chart Styles */
+.area {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.area:hover {
+  opacity: 0.9;
+}
+
+/* Network Graph Styles */
+.node {
+  stroke: #fff;
+  stroke-width: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.node:hover {
+  stroke-width: 3px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: 0.6;
+  transition: stroke-opacity 0.3s ease;
+}
+
+.link:hover {
+  stroke-opacity: 1;
+}
+
+/* Axis Styles */
+.axis text {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  fill: #6b7280;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #d1d5db;
+  shape-rendering: crispEdges;
+}
+
+/* Grid Lines */
+.grid line {
+  stroke: #e5e7eb;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+/* Tooltip Styles */
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.chart-loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chart-container {
+    height: 300px;
+  }
+  
+  .axis text {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .chart-container {
+    height: 250px;
+  }
+}

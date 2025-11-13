@@ -1,0 +1,1 @@
+{"type": "bar", "data": [{"month": "Jan", "sales": 10000.0, "expenses": 5000.0, "profit": 5000.0}, {"month": "Feb", "sales": 12000.0, "expenses": 6000.0, "profit": 6000.0}, {"month": "Mar", "sales": 15000.0, "expenses": 7000.0, "profit": 8000.0}], "title": "AI Generated Sales Chart", "width": 600, "height": 400}
